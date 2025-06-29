@@ -1,0 +1,283 @@
+{
+  "status": "success",
+  "summary": {
+    "total_relationships": 15,
+    "total_insights": 7,
+    "total_visualizations": 4,
+    "domain": "sales"
+  },
+  "relationships": [
+    {
+      "type": "correlation",
+      "columns": [
+        "Daily_Sales",
+        "Marketing_Spend"
+      ],
+      "strength": 0.4249900389937708,
+      "description": "Daily_Sales and Marketing_Spend show positive correlation",
+      "p_value": 3.552722344134058e-10
+    },
+    {
+      "type": "correlation",
+      "columns": [
+        "Daily_Sales",
+        "Customer_Satisfaction"
+      ],
+      "strength": 0.41756125397746846,
+      "description": "Daily_Sales and Customer_Satisfaction show positive correlation",
+      "p_value": 7.673888153870381e-10
+    },
+    {
+      "type": "correlation",
+      "columns": [
+        "Daily_Sales",
+        "Customer_Count"
+      ],
+      "strength": 0.5454499266318927,
+      "description": "Daily_Sales and Customer_Count show positive correlation",
+      "p_value": 6.735177345062173e-17
+    },
+    {
+      "type": "correlation",
+      "columns": [
+        "Has_Promotion",
+        "Marketing_Spend"
+      ],
+      "strength": 0.6705037462548826,
+      "description": "Has_Promotion and Marketing_Spend show positive correlation",
+      "p_value": 1.791158286629852e-27
+    },
+    {
+      "type": "correlation",
+      "columns": [
+        "Marketing_Spend",
+        "Customer_Count"
+      ],
+      "strength": 0.3481118014731035,
+      "description": "Marketing_Spend and Customer_Count show positive correlation",
+      "p_value": 4.393471792457082e-07
+    },
+    {
+      "type": "correlation",
+      "columns": [
+        "Customer_Satisfaction",
+        "Customer_Count"
+      ],
+      "strength": 0.34650476154223186,
+      "description": "Customer_Satisfaction and Customer_Count show positive correlation",
+      "p_value": 5.0032553253459e-07
+    },
+    {
+      "type": "grouping",
+      "columns": [
+        "Region",
+        "Daily_Sales"
+      ],
+      "strength": 1.0,
+      "description": "Daily_Sales varies significantly across Region categories",
+      "p_value": 1.223434906288851e-15
+    },
+    {
+      "type": "grouping",
+      "columns": [
+        "Product_Category",
+        "Marketing_Spend"
+      ],
+      "strength": 0.4674756378312635,
+      "description": "Marketing_Spend varies significantly across Product_Category categories",
+      "p_value": 0.010386845577599134
+    },
+    {
+      "type": "grouping",
+      "columns": [
+        "Product_Category",
+        "Customer_Count"
+      ],
+      "strength": 0.4709411395513855,
+      "description": "Customer_Count varies significantly across Product_Category categories",
+      "p_value": 0.010048876961711063
+    },
+    {
+      "type": "time_series",
+      "columns": [
+        "Date",
+        "Daily_Sales"
+      ],
+      "strength": 0.5141769600800361,
+      "description": "Daily_Sales shows increasing trend over time (Date)",
+      "p_value": 6.837836392264216e-15
+    },
+    {
+      "type": "time_series",
+      "columns": [
+        "Date",
+        "Marketing_Spend"
+      ],
+      "strength": 0.3877369130665007,
+      "description": "Marketing_Spend shows increasing trend over time (Date)",
+      "p_value": 1.4069688397331053e-08
+    },
+    {
+      "type": "time_series",
+      "columns": [
+        "Date",
+        "Customer_Satisfaction"
+      ],
+      "strength": 0.33186932879600595,
+      "description": "Customer_Satisfaction shows increasing trend over time (Date)",
+      "p_value": 1.581276758905078e-06
+    },
+    {
+      "type": "time_series",
+      "columns": [
+        "Date",
+        "Customer_Count"
+      ],
+      "strength": 0.4789533309767534,
+      "description": "Customer_Count shows increasing trend over time (Date)",
+      "p_value": 7.278305199626923e-13
+    },
+    {
+      "type": "distribution",
+      "columns": [
+        "Has_Promotion"
+      ],
+      "strength": 0.6810448847764514,
+      "description": "Has_Promotion has a highly skewed distribution",
+      "p_value": 1.7376397941485022e-09
+    },
+    {
+      "type": "distribution",
+      "columns": [
+        "Marketing_Spend"
+      ],
+      "strength": 0.42175685982137107,
+      "description": "Marketing_Spend has a non-normal distribution",
+      "p_value": 4.373563682261813e-06
+    }
+  ],
+  "insights": [
+    {
+      "category": "relationship",
+      "description": "There is a moderate correlation between the daily sales and the marketing spend. This indicates that as the marketing spend increases, the daily sales tend to also increase.",
+      "confidence": 0.8,
+      "suggested_action": "Explore correlation relationship between ['Daily_Sales', 'Marketing_Spend']"
+    },
+    {
+      "category": "relationship",
+      "description": "There is a strong correlation between the marketing spend and whether there is a promotion or not. This suggests that more money is spent on marketing when there is a promotion.",
+      "confidence": 0.9,
+      "suggested_action": "Explore correlation relationship between ['Has_Promotion', 'Marketing_Spend']"
+    },
+    {
+      "category": "relationship",
+      "description": "The daily sales appear to be grouped by region. This may suggest that the region has an impact on daily sales.",
+      "confidence": 0.7,
+      "suggested_action": "Explore grouping relationship between ['Region', 'Daily_Sales']"
+    },
+    {
+      "category": "relationship",
+      "description": "There is a temporal relationship between the date and the daily sales. This could suggest seasonality or trends over time.",
+      "confidence": 0.8,
+      "suggested_action": "Explore temporal relationship between ['Date', 'Daily_Sales']"
+    },
+    {
+      "category": "business_insight",
+      "description": "Increasing marketing spend could potentially lead to increased daily sales.",
+      "confidence": 0.8,
+      "suggested_action": "Consider increasing the marketing budget to potentially increase sales."
+    },
+    {
+      "category": "business_insight",
+      "description": "There are regional differences in daily sales.",
+      "confidence": 0.7,
+      "suggested_action": "Investigate regional differences and adjust marketing strategies accordingly."
+    },
+    {
+      "category": "business_insight",
+      "description": "Sales seem to be influenced by promotional activities.",
+      "confidence": 0.9,
+      "suggested_action": "Consider scheduling more promotional activities to boost sales."
+    }
+  ],
+  "visualizations": [
+    {
+      "chart_type": "line_chart",
+      "columns": [
+        "Date",
+        "Daily_Sales"
+      ],
+      "title": "Daily Sales Over Time",
+      "description": "This line chart shows how daily sales have changed over time.",
+      "priority": 10,
+      "reasoning": "Line charts are effective for showing trends over time. This allows businesses to identify patterns and make predictions about future sales.",
+      "business_value": "Understanding how sales have changed over time can help the business to make strategic decisions about pricing, promotions, and inventory management.",
+      "interactive_features": [
+        "zoom",
+        "filter"
+      ]
+    },
+    {
+      "chart_type": "bar_chart",
+      "columns": [
+        "Region",
+        "Daily_Sales"
+      ],
+      "title": "Sales by Region",
+      "description": "This bar chart shows the total sales for each region.",
+      "priority": 9,
+      "reasoning": "Bar charts are effective for comparing categories. This allows businesses to see which regions have the highest and lowest sales.",
+      "business_value": "Understanding which regions have the highest sales can help the business to target their marketing efforts and improve sales in lower-performing regions.",
+      "interactive_features": [
+        "filter"
+      ]
+    },
+    {
+      "chart_type": "scatter_plot",
+      "columns": [
+        "Marketing_Spend",
+        "Daily_Sales"
+      ],
+      "title": "Sales vs. Marketing Spend",
+      "description": "This scatter plot shows the relationship between marketing spend and sales.",
+      "priority": 8,
+      "reasoning": "Scatter plots are effective for showing correlations. This allows businesses to see if increased marketing spend leads to increased sales.",
+      "business_value": "Understanding the relationship between marketing spend and sales can help the business to make strategic decisions about their marketing budget.",
+      "interactive_features": [
+        "zoom",
+        "filter"
+      ]
+    },
+    {
+      "chart_type": "heatmap",
+      "columns": [
+        "Product_Category",
+        "Region",
+        "Daily_Sales"
+      ],
+      "title": "Sales Heatmap by Product Category and Region",
+      "description": "This heatmap shows the sales for each product category in each region.",
+      "priority": 7,
+      "reasoning": "Heatmaps are effective for showing relationships between multiple variables. This allows businesses to see which product categories sell best in each region.",
+      "business_value": "Understanding which product categories sell best in each region can help the business to target their inventory and marketing efforts.",
+      "interactive_features": [
+        "filter"
+      ]
+    }
+  ],
+  "next_steps": [
+    "Create interactive dashboard with top-priority visualizations",
+    "Set up data monitoring for quality issues",
+    "Implement automated reporting for key metrics",
+    "Track sales funnel conversion rates",
+    "Monitor seasonal trends and patterns",
+    "Analyze customer segmentation opportunities"
+  ],
+  "data_quality": [
+    {
+      "issue": "There are no major data quality issues detected in this dataset. All columns have complete data and there are no outliers detected.",
+      "severity": "low",
+      "recommendation": "Continue to monitor data quality over time."
+    }
+  ]
+}
